@@ -6,6 +6,9 @@ int main(){
     if((y%4)==0){
         printf("It is a leap year\n");
     }
+    else if((y%100)==0){
+        printf("It is a leap year\n");
+    }
     else if(y<0){
         printf("entered year should be a positive integer\n");
     }
