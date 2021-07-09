@@ -8,23 +8,24 @@ amount is charged. Write a program */
 #include<math.h>
 int main(){
     char name[20];
-    float n,m;
+    float total,units;
     printf("enter the name of the consumer\n");
-    scanf("%s",&name);
+    scanf("%s",name);
     printf("enter the meter reading\n");
-    scanf("%f",&m);
-    if(m<=100){
-        n=(m*0.8)+(100);
+    scanf("%f",&units);
+    if(units<=200){
+        total=(units*0.8)+(100);//meter reading when units less than 200
     }
-    else if(m>100  ||  m<=300){
-        n=(m*0.9)+100;
+    else if(units>200  ||  units<=300){
+        total=(200*0.8)+((units-200)*0.9)+100;// when meter reading is between 200 and 301
     }
     else{
-        n=(m*1)+100;
+        total=(200*0.8)+(100*0.9)+((units-300)*1)+100;// when meter reading is freater than 300 units
     }
-    if(n>400){
-        n=n+((15*n)/100);
+    if(total>400){
+        total=total+((15*total)/100);// 15% surcharge on the total bill greater than 400rs only.
     }
-    printf("amount to be paid is %.3f\n",n);
+    printf("name : %s\n",name);
+    printf("amount to be paid is Rs. %.3f\n",total);
     return 0;
 }
