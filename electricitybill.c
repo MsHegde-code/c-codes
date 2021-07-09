@@ -16,7 +16,7 @@ int main(){
     if(units<=200){
         total=(units*0.8)+(100);//meter reading when units less than 200
     }
-    else if(units>200  ||  units<=300){
+    else if(units>200  &&  units<=300){
         total=(200*0.8)+((units-200)*0.9)+100;// when meter reading is between 200 and 301
     }
     else{
