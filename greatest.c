@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main(){
-    int a,b,c;
+    int num1,num2,num3;
     printf("enter three numbers");
-    scanf("%d%d%d",&a,&b,&c);
-    if(b<a&&a>c){
-        printf("%d is greatest",a);
+    scanf("%d%d%d",&num1,&num2,&num3);
+    if(num2<num1&&num1>num3){
+        printf("%d is greatest",num1);
     }
-    else if(a<b&&b>c){
-        printf("%d is greatest",b);
+    else if(num1<num2&&num2>num3){
+        printf("%d is greatest",num2);
     }
     else{
-        printf("%d is greatest",c);
+        printf("%d is greatest",num3);
     }
     return 0;
 }
