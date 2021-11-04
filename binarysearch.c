@@ -12,9 +12,9 @@
     mid=(low+high)/2;
     while(low<=high){
         if(array[mid]<key)
-        low=mid+1;
+            low=mid+1;
         else if(array[mid]==key){
-        printf("%d found at location %d",key,mid+1);
+            printf("%d found at location %d",key,mid+1);
         break;}
         else
         high=mid-1;
